@@ -1,6 +1,6 @@
 :root {
   --main-color: #ffffff;
-  --hero-footer-color: #2f303a;
+  --footer-color: #2f303a;
   --section-color: #f5f4fa;
   --text-color: #757575;
   --title-color: #212121;
@@ -14,15 +14,42 @@ body {
   color: var(--text-color);
 }
 
-.link {
-  text-decoration: none;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
-.list {
+ul {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
+
 /* Хедер */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .header-logo {
   font-family: 'Raleway', sans-serif;
@@ -31,10 +58,24 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  margin-right: 93px;
 }
 
 .accent {
   color: #000000;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-link {
@@ -42,6 +83,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link:hover,
@@ -53,11 +97,22 @@ body {
   color: var(--accent-color);
 }
 
+.header-list-contact {
+  display: flex;
+}
+
 .header-link-contact {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-item-contact:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-link-contact:hover,
@@ -70,17 +125,20 @@ body {
 /* Герой */
 
 .hero {
-  background: var(--hero-footer-color);
+  background: var(--footer-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-color);
+  margin-bottom: 40px;
 }
 
 .hero-btn {
@@ -88,9 +146,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
   color: var(--main-color);
@@ -119,12 +174,22 @@ body {
   margin: -1px;
 }
 
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.benefits-list {
+  display: flex;
+}
+
 .benefits-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .benefits-text {
@@ -175,7 +240,7 @@ body {
 /* Футер */
 
 .footer {
-  background-color: var(--hero-footer-color);
+  background-color: var(--footer-color);
 }
 
 .accent-logo {
