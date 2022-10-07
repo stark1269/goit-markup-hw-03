@@ -200,10 +200,11 @@ address {
 
 .benefits-list {
   display: flex;
+  gap: 30px;
 }
 
-.benefits-item:not(:last-child) {
-  margin-right: 30px;
+.benefits-item {
+  width: calc((100% - 90px) / 4);
 }
 
 .benefits-title {
@@ -228,6 +229,7 @@ address {
 
 .section-list {
   display: flex;
+  gap: 30px;
 }
 
 .section-title {
@@ -239,8 +241,8 @@ address {
   margin-bottom: 50px;
 }
 
-.section-item:not(:last-child) {
-  margin-right: 30px;
+.section-item {
+  width: calc((100% - 60px) / 3);
 }
 
 /* Наша команда */
@@ -253,6 +255,7 @@ address {
 
 .team-list {
   display: flex;
+  gap: 30px;
 }
 
 .team-title {
@@ -264,16 +267,13 @@ address {
   margin-bottom: 50px;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .team-item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-color);
   padding-bottom: 30px;
+  width: calc((100% - 90px) / 4);
 }
 
 .team-img {
@@ -400,6 +400,10 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.project-item-img {
+  width: calc((100% - 60px) / 3);
 }
 
 .project-img-desc {
