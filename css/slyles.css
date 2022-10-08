@@ -48,12 +48,30 @@ address {
   font-style: normal;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Хедер */
@@ -69,13 +87,15 @@ address {
 }
 
 .header-logo {
+  margin-right: 93px;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
   color: var(--accent-color);
-  margin-right: 93px;
 }
 
 .accent {
@@ -96,13 +116,15 @@ address {
 }
 
 .header-link {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-color);
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--title-color);
 }
 
 .header-link:hover,
@@ -119,13 +141,15 @@ address {
 }
 
 .header-link-contact {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--text-color);
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
 }
 
 .header-item-contact:not(:last-child) {
@@ -142,33 +166,41 @@ address {
 /* Герой */
 
 .hero {
-  background: var(--footer-color);
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
+
+  background: var(--footer-color);
 }
 
 .hero-title {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 696px;
+
   color: var(--main-color);
-  margin-bottom: 40px;
 }
 
 .hero-btn {
+  padding: 10px 32px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: var(--main-color);
-  background-color: var(--accent-color);
-  padding: 10px 32px;
   border: none;
   border-radius: 4px;
+
+  color: var(--main-color);
+  background-color: var(--accent-color);
 }
 
 .hero-btn:hover,
@@ -180,24 +212,6 @@ address {
 
 /* Преймущества */
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
-.benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .benefits-list {
   display: flex;
   gap: 30px;
@@ -208,12 +222,14 @@ address {
 }
 
 .benefits-title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
   color: var(--title-color);
-  margin-bottom: 10px;
 }
 
 .benefits-text {
@@ -223,25 +239,28 @@ address {
 
 /* Чем мы занимаемся */
 
-.section {
-  padding-bottom: 94px;
+.about {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.section-list {
+.about-list {
   display: flex;
   gap: 30px;
 }
 
-.section-title {
+.about-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--title-color);
-  margin-bottom: 50px;
 }
 
-.section-item {
+.about-item {
   width: calc((100% - 60px) / 3);
 }
 
@@ -249,8 +268,6 @@ address {
 
 .team {
   background-color: var(--section-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team-list {
@@ -259,21 +276,24 @@ address {
 }
 
 .team-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--title-color);
-  margin-bottom: 50px;
 }
 
 .team-item {
+  padding-bottom: 30px;
+  width: calc((100% - 90px) / 4);
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-color);
-  padding-bottom: 30px;
-  width: calc((100% - 90px) / 4);
 }
 
 .team-img {
@@ -281,13 +301,15 @@ address {
 }
 
 .team-title-name {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--title-color);
-  margin-bottom: 10px;
 }
 
 .team-text {
@@ -300,9 +322,10 @@ address {
 /* Футер */
 
 .footer {
-  background-color: var(--footer-color);
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--footer-color);
 }
 
 .accent-logo {
@@ -315,6 +338,7 @@ address {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+
   color: var(--accent-color);
 }
 
@@ -329,6 +353,7 @@ address {
 .footer-link-address {
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--main-color);
 }
 
@@ -340,6 +365,7 @@ address {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -354,11 +380,6 @@ address {
   margin-bottom: 50px;
 }
 
-.project {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .project-list {
   display: flex;
   justify-content: center;
@@ -369,20 +390,19 @@ address {
 }
 
 .project-btn {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: none;
 
   color: var(--title-color);
   background: var(--section-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border: none;
-  padding: 6px 22px;
 }
 
 .project-btn:hover,
@@ -413,11 +433,13 @@ address {
 }
 
 .project-img-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
   color: var(--title-color);
-  margin-bottom: 4px;
 }
 
 .project-img-text {
